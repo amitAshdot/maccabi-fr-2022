@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he-IL">
+
+<head>
+    <meta name="description"
+        content="Rejoignez le meilleur groupe de santé en Israël et conservez vos droits et votre ancienneté">
+    <meta name="keywords" content="Maccabi">
+    <meta name="author" content="Amit Ashdot">
+    <link rel="icon" href="./images/favicon.ico" sizes="32x32">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <!-- preload css, fonts     -->
+    <!--<link 
+        rel="preload"
+        as="style"
+        onload="this.rel = 'stylesheet'"
+       type="text/css"   href="./css/index.css" -->
+
+    <!-- <link rel="preload" as="font" href="https://amitashdot.github.io/targetCall-landing/fonts/ploni-regular-aaa.otf"
+        type="font/otf" crossorigin="anonymous"> -->
+
+    <!-- Accept-Encoding: gzip, deflate -->
+    <!-- PWA     -->
+    <meta name="theme-color" content="#08428F" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="apple-touch-icon" href="./images/favicon.ico">
+    <meta property="og:title"
+        content="Rejoignez le meilleur groupe de santé en Israël et conservez vos droits et votre ancienneté">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://mylog.co.il/Maccabi/land/35930_3/images/facebook.jpg">
+    <meta property="og:type" content="website">
+
+    <title>Maccabi</title>
+    <meta name="robots" content="max-image-preview:large">
+</head>
+
+<body>
+    <!-- TOP SECTION START-->
+    <section class="top-section" id="header" aria-label="top-section">
+        <img class="logo" src="images/logo-small.webp" alt="לוגו" title="לוגו" width="110" height="42" load="lazy">
+    </section>
+    <!-- TOP SECTION END-->
+
+    <!-- CTA SECTION START-->
+    <section class="cta-section" id="cta" aria-label="cta-section">
+        <div class="box box-top">
+            <div class="cta-text">
+                <p id="basad">בס"ד</p>
+                <p class="details">
+                    Oui!<br>
+                    Je veux en <br>
+                    savoir plus sur la
+
+                </p>
+                <p id="maccabi">Maccabi</p>
+            </div>
+        </div>
+        <!-- <iframe width="700" height="400"
+            src="https://data.gov.il/dataset/citiesandsettelments/resource/5c78e9fa-c2e2-4771-93ff-7f400a12f7ba/view/142a018b-c8f8-4f79-b922-891245e23835"
+            frameBorder="0"></iframe> -->
+        <div class="box box-bottom">
+            <form class="cta-form show-on-scroll" id="form" method="post">
+                <div class=" cta-form-inputs">
+
+                    <input type="text" class="cta-input" placeholder="Prénom" name="Fname" id="Fname">
+                    <input type="text" class="cta-input" placeholder="Nom de famille" name="Sname" id="Sname">
+                    <input type="tel" class="cta-input" placeholder="Carte d'identité" name="id" id="id">
+                    <input type="tel" class="cta-input" placeholder="Téléphone" name="phone" id="phone">
+                    <!-- <input type="text" class="cta-input" placeholder="אימייל" name="email" id="email"> -->
+                    <select class="cta-input select" name="time" id="time">
+                        <option value="">Temps de retour</option>
+                    </select>
+                    <input type="text" class="cta-input" placeholder="Ville" name="city" id="city">
+                    <button type="submit" class="cta-submit btn">Contactez-moi</button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <!-- CTA SECTION END-->
+
+    <!-- FOOTER SECTION START-->
+    <footer class="footer-section" aria-label="footer-section">
+    </footer>
+    <!-- FOOTER SECTION END-->
+    <script defer type="text/javascript" src="./js/scripts.js"></script>
+    <script defer type="text/javascript" src="./js/zepto.min.js"></script>
+    <script defer type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- <script>
+        function moveTo(event) { window.scrollTo(0, document.body.scrollHeight); }
+    </script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            $('#form').submit(function (e) {
+                e.preventDefault();
+                var data = $(this).serialize();
+                $.ajax({
+                    type: "POST",
+                    url: './mail.php',
+                    data: data,
+                    success: function (mail) {
+                        alert('הפרטים נשלחו בהצלחה');
+                        // window.location.href = 'thankyou.html';
+                    }
+                });
+
+            });
+        });
+    </script>
+
+    <script>
+        let timeList = [
+            '09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00',
+            '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30'
+        ]
+        let selectTime = document.getElementById('time');
+        for (let i = 0; i < timeList.length; i++) {
+            let option = document.createElement("option");
+            option.value = timeList[i];
+            option.text = timeList[i];
+            selectTime.add(option);
+        }
+    </script>
+</body>
+
+</html>

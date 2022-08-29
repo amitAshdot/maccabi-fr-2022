@@ -1,0 +1,300 @@
+.logo {
+    // position: absolute;
+    // margin-block-start: auto;
+    // right: 1rem;
+    // top: 1rem;
+    z-index: 1;
+    position: absolute;
+    margin-block-start: auto;
+    right: 1rem;
+    top: 1rem;
+    background: white;
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+    border-radius: 30% 50% 20% 50%;
+    padding: 1rem;
+    animation: changingBorderRadius 2s infinite linear;
+
+    @include respond(tab-port) {
+        position: absolute;
+        margin-block-start: -5rem;
+        right: 1rem;
+        top: 1rem;
+        z-index: 1;
+        background: white;
+        border-radius: 50%;
+        height: 25rem;
+        width: 25rem;
+        padding: 4rem;
+        object-fit: contain;
+    }
+}
+
+.cta {
+    &-section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        justify-content: center;
+        align-items: flex-start;
+        // padding-block-start: 4rem;
+        // padding-block-end: 4rem;
+        padding-inline-start: 7rem;
+        padding-inline-end: 7rem;
+        overflow: visible;
+        // border: 1px solid blue;
+        max-width: 1920px;
+        margin: auto;
+        // margin-top: -6rem;
+
+        @include respond(tab-port) {
+            gap: 40rem;
+            padding-inline-start: 3rem;
+            padding-inline-end: 3rem;
+            padding-block-end: 0rem;
+        }
+    }
+
+    &-text {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        // margin-block-start: 2rem;
+
+        .details {
+            font-size: 4rem;
+            font-weight: bold;
+            line-height: 5rem;
+            // color: $color-secondary;
+            color: $color-white;
+            margin-top: 30px;
+
+            @include respond(tab-port) {
+                font-size: 10rem;
+                line-height: 11rem;
+            }
+        }
+
+        #maccabi {
+            font-family: 'complet-bold', sans-serif;
+            font-size: 8rem;
+            font-weight: bold;
+            // color: $color-primary;
+            color: $color-white;
+            line-height: 9rem;
+
+            @include respond(tab-port) {
+                font-size: 25rem;
+                line-height: 26rem;
+            }
+        }
+    }
+
+    &-form {
+        // background: rgb(38, 171, 225);
+        // background: linear-gradient(225deg, rgba(38, 171, 225, 1) 0%, rgba(8, 66, 143, 1) 85%);
+
+        // padding-inline-start: 1rem;
+        // border-inline-start: 0.5rem solid $color-primary;
+        // max-width: 1170px;
+
+        @include respond(tab-port) {
+            padding-block-end: 5rem;
+        }
+
+        &-inputs {
+            display: flex;
+            justify-content: start;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 75%;
+            margin: auto;
+            padding-top: 7rem;
+            justify-content: space-evenly;
+
+            @include respond(tab-port) {
+                width: 80%;
+                padding-top: 8rem;
+            }
+        }
+    }
+
+    &-input {
+        font-size: 1.5rem;
+        width: 18rem;
+        height: 3.2rem;
+        padding-inline-start: 1rem;
+        padding-inline-end: 1rem;
+        margin-inline-end: 1rem;
+        border-radius: 31px;
+        border: 2px solid $color-black;
+        background: white;
+
+        @include respond(tab-port) {
+            font-size: 3.9rem;
+            width: 100%;
+            height: 3.2rem;
+            border-radius: 31px;
+            height: 10rem;
+            padding-inline-start: 3rem;
+            padding-inline-end: 3rem;
+            margin-block-start: 2rem;
+        }
+
+        &:first-child {
+
+            @include respond(tab-port) {
+                margin-block-start: 0rem;
+            }
+        }
+
+        &:nth-child(n+3) {
+            margin-block-start: 1rem;
+
+            @include respond(tab-port) {
+                margin-block-start: 2rem;
+            }
+        }
+
+        &::placeholder {
+            color: $color-black;
+        }
+
+        &.select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: left 1rem center;
+            background-size: 1em;
+            background: white;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &.error {
+            border: 2px solid $error-border;
+            background: $error-bg;
+        }
+    }
+
+    &-submit {
+        @include global-btn($color-white, $color-primary, $color-black);
+        width: 18rem;
+        height: 3.2rem;
+        margin-block-start: 1rem;
+        // margin-inline-start: auto;
+        // margin-inline-end: 1.7rem;
+        border-radius: 31px;
+        background-color: $color-primary;
+
+
+        @include respond(tab-port) {
+            font-size: 6rem;
+            width: 100%;
+            height: 10rem;
+            border-radius: 31px;
+            padding-inline-start: 3rem;
+            padding-inline-end: 3rem;
+            margin-block-start: 2rem;
+        }
+    }
+
+    &-message {
+        position: absolute;
+        right: 0;
+
+        opacity: 0;
+        width: 100%;
+        margin-block-start: 1rem;
+        margin-block-end: 1rem;
+        text-align: center;
+
+        transition: all 0.3s;
+
+        @include respond(tab-port) {
+            font-size: 3.9rem;
+            width: 100%;
+            margin-block-start: 2rem;
+            margin-block-end: 2rem;
+        }
+
+        &.error {
+            opacity: 1;
+            border: 2px solid $error-border;
+            background: $error-bg;
+            text-align: center;
+            border-radius: 20px;
+            padding: 1rem;
+            margin-top: 1rem;
+            line-height: initial;
+            font-size: 1.5rem;
+
+
+            @include respond(tab-port) {
+                font-size: 4.5rem;
+            }
+        }
+
+        &:empty {
+            display: none;
+        }
+    }
+}
+
+
+.box {
+    width: 53rem;
+    height: 25rem;
+    // position: absolute;
+    top: 0px;
+    left: 0px;
+    // background-color: #f3e4db;
+    // filter: drop-shadow(9px 4px 2px #08428F);
+    background-image: linear-gradient(19deg, $color-primary-part-transparent 0%, $color-secondary-part-transparent 100%);
+    box-shadow: 10px -1px 0px 10px #08428f69;
+
+    &-top {
+        width: 30.7rem;
+        height: 22.35rem;
+        border-start-start-radius: 50% 40%;
+        border-start-end-radius: 30% 60%;
+        border-end-start-radius: 70% 60%;
+        border-end-end-radius: 30% 40%;
+
+        @include respond(tab-port) {
+            width: 90rem;
+            height: 85rem;
+            margin-top: -13rem;
+            padding-block-start: 15rem;
+            border-end-end-radius: 70% 60%;
+        }
+    }
+
+    &-bottom {
+        margin-inline-start: 25rem;
+        border-start-start-radius: 30% 40%;
+        border-start-end-radius: 70% 60%;
+        border-end-start-radius: 30% 60%;
+        border-end-end-radius: 70% 40%;
+
+        @include respond(tab-port) {
+            margin-inline-start: 0rem;
+            width: 94vw;
+            height: auto;
+            border-start-start-radius: 5% 5%;
+            border-start-end-radius: 5% 5%;
+            border-end-start-radius: 0;
+            border-end-end-radius: 0;
+
+            // background-image: linear-gradient(19deg, $color-primary 0%, $color-secondary 100%);
+            background-image: linear-gradient(19deg, #08428f 0%, #26abe1de 100%);
+            box-shadow: none;
+        }
+    }
+}

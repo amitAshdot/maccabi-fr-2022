@@ -1,0 +1,280 @@
+.blue-background {
+  background-color: $color-primary;
+  padding: 0 1rem;
+}
+
+.black-background {
+  background-color: $color-black;
+  padding: 0 1rem;
+}
+
+.receive-section {
+  display: flex;
+  justify-content: center;
+  background-color: $color-grey-light-1;
+  padding: 16rem 3rem;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    padding: 5rem 3rem;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    max-width: 50%;
+    margin-left: 1rem;
+
+    @include respond(tab-port) {
+      align-items: center;
+      max-width: 100%;
+      margin-left: 0rem;
+    }
+
+    &__top {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      margin-bottom: 4rem;
+
+      @include respond(tab-port) {
+        justify-content: center;
+        width: 50%;
+        margin-bottom: 0;
+        margin-right: -6rem;
+      }
+
+      @include respond(phone) {
+        width: 70%;
+        justify-content: center;
+        margin-right: -3rem;
+      }
+
+      &-image {
+        width: 25%;
+        margin-left: 3rem;
+
+        @include respond(tab-port) {
+          width: 15%;
+          margin-left: 1rem;
+        }
+
+        @include respond(tab-port) {
+          width: 15%;
+          margin-left: 1rem;
+        }
+
+        @include respond(phone) {
+          width: 15%;
+          justify-content: end;
+          align-items: flex-end;
+          margin-right: -3rem;
+        }
+
+        @include respond(phone-smal) {
+          width: 15%;
+          margin-left: 1rem;
+        }
+      }
+
+      &-text {
+        color: $color-white;
+        font-family: "complet-bold", sans-serif;
+        font-size: 4.5vw;
+        line-height: 4.3vw;
+        overflow: hidden;
+
+        @include respond(tab-port) {
+          font-size: 4rem;
+          line-height: 5rem;
+        }
+
+        @include respond(phone) {
+          justify-content: center;
+        }
+
+        @include respond(phone-small) {
+          font-size: 3rem;
+          line-height: 4rem;
+        }
+      }
+    }
+
+    &__bottom {
+      &-text {
+        font-family: "complet-bold", sans-serif;
+        font-size: 4.5vw;
+        line-height: 4.3vw;
+
+        color: $color-white;
+        text-align: center;
+        overflow: hidden;
+
+        @include respond(tab-port) {
+          font-size: 4rem;
+          line-height: 5rem;
+          margin: 2rem 0 3rem;
+        }
+
+        @include respond(phone-small) {
+          font-size: 3rem;
+          line-height: 4rem;
+          margin: 2rem 0 2rem;
+        }
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: flex-end;
+    font-family: "complet-bold", sans-serif;
+
+    @include respond(tab-port) {
+      align-self: center;
+    }
+
+    &-title {
+      font-size: 4.5vw;
+      line-height: 4.3vw;
+      overflow: hidden;
+
+      @include respond(tab-port) {
+        font-size: 4rem;
+        line-height: 5rem;
+      }
+
+      @include respond(phone-small) {
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+    }
+  }
+}
+
+.visit-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 3rem;
+  font-family: "complet-bold", sans-serif;
+
+  @include respond(small-desktop) {}
+
+  @include respond(tab-land) {}
+
+  @include respond(tab-port) {}
+
+  @include respond(tab-port) {}
+
+  @include respond(phone) {
+    padding: 5rem 1rem;
+  }
+
+  @include respond(phone-small) {}
+
+  &-title {
+    font-size: 4.5vw;
+    margin-bottom: 4rem;
+
+    @include respond(small-desktop) {}
+
+    @include respond(tab-land) {}
+
+    @include respond(tab-port) {}
+
+    @include respond(tab-port) {}
+
+    @include respond(phone) {
+      font-size: 3.5rem;
+      margin-bottom: 0rem;
+    }
+
+    @include respond(phone-small) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &-button {
+    @include submitBasic($color-primary);
+    font-size: 4.5vw;
+    padding: 0rem 2rem;
+    overflow: hidden;
+    height: auto;
+    width: 43%;
+    margin-top: 0;
+    margin-bottom: 10rem;
+    text-align: center;
+
+    @include respond(phone) {
+      height: auto;
+      font-size: 3rem;
+      width: 60%;
+      padding: 0.5rem;
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+    }
+
+    @include respond(phone-small) {
+      font-size: 2.8rem;
+    }
+
+    &:link {
+      text-decoration: none;
+    }
+
+    &:visited,
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      @include buttonHover;
+    }
+  }
+
+  &-text {
+    font-family: "complet", sans-serif;
+    font-size: 7rem;
+    margin-bottom: 13rem;
+
+    @include respond(phone) {
+      font-size: 4rem;
+      margin-bottom: 8rem;
+    }
+
+    @include respond(phone-small) {
+      font-size: 3rem;
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+
+    @include respond(small-desktop) {
+      width: 40vw;
+    }
+
+    @include respond(tab-land) {
+      width: 45vw;
+    }
+
+    @include respond(tab-port) {}
+
+    @include respond(tab-port) {
+      width: 50vw;
+    }
+
+    &-image {
+      width: 100%;
+      align-self: center;
+    }
+  }
+}
