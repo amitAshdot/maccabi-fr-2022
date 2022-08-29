@@ -6,8 +6,8 @@
     z-index: 1;
     position: absolute;
     margin-block-start: auto;
-    right: 1rem;
-    top: 1rem;
+    inset-inline-start: 1rem;
+    inset-block-start: 1rem;
     background: white;
     width: 8rem;
     height: 8rem;
@@ -66,30 +66,30 @@
         // margin-block-start: 2rem;
 
         .details {
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: bold;
-            line-height: 5rem;
+            line-height: 3rem;
             // color: $color-secondary;
             color: $color-white;
             margin-top: 30px;
 
             @include respond(tab-port) {
                 font-size: 10rem;
-                line-height: 11rem;
+                line-height: 10rem;
             }
         }
 
         #maccabi {
             font-family: 'complet-bold', sans-serif;
-            font-size: 8rem;
+            font-size: 6rem;
             font-weight: bold;
             // color: $color-primary;
             color: $color-white;
-            line-height: 9rem;
+            line-height: 6rem;
 
             @include respond(tab-port) {
-                font-size: 25rem;
-                line-height: 26rem;
+                font-size: 19rem;
+                line-height: 22rem;
             }
         }
     }
