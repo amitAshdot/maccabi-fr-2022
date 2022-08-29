@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
             flag = true;
         }
         if (flag) {
-            message.innerHTML = "אנא מלא/י את כל השדות הנדרשים";
+            message.innerHTML = "Veuillez remplir tous les champs obligatoires;
             message.classList.add("error");
         }
         return flag ? false : true;
