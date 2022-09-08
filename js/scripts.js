@@ -1,58 +1,46 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // When the user scrolls the page, execute myFunction
-    window.onscroll = function () { setFixed() };
-    let header = document.getElementById("header");
-    let viewPortWidth = window.innerWidth
-    let sticky = viewPortWidth * 0.011111 * 5;//5% of the viewport width
-    const setFixed = () => {
-        if (window.pageYOffset > sticky)
-            header.classList.add("sticky");
-        else
-            header.classList.remove("sticky");
-    }
-
     // -----START IS ON SCREEN-----
-    // Helper function from: http://stackoverflow.com/a/7557433/274826
-    const isElementInViewport = el => {
-        const pixFromElementTop = 1;
-        // special bonus for those using jQuery
-        if (typeof jQuery === "function" && el instanceof jQuery) {
-            el = el[0];
-        }
-        let rect = el.getBoundingClientRect();
-        return (
-            (rect.top + pixFromElementTop <= 0 && rect.bottom >= 0) ||
-            (rect.bottom + pixFromElementTop >=
-                (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.top + pixFromElementTop <=
-                (window.innerHeight || document.documentElement.clientHeight)) ||
-            (rect.top + pixFromElementTop >= 0 &&
-                rect.bottom + pixFromElementTop <=
-                (window.innerHeight || document.documentElement.clientHeight))
-        );
-    };
-    // Detect request animation frame
-    let scroll =
-        window.requestAnimationFrame ||
-        // IE Fallback
-        function (callback) {
-            window.setTimeout(callback, 1000 / 60);
-        };
-    let elementsToShow = document.querySelectorAll(".show-on-scroll");
+    // // Helper function from: http://stackoverflow.com/a/7557433/274826
+    // const isElementInViewport = el => {
+    //     const pixFromElementTop = 1;
+    //     // special bonus for those using jQuery
+    //     if (typeof jQuery === "function" && el instanceof jQuery) {
+    //         el = el[0];
+    //     }
+    //     let rect = el.getBoundingClientRect();
+    //     return (
+    //         (rect.top + pixFromElementTop <= 0 && rect.bottom >= 0) ||
+    //         (rect.bottom + pixFromElementTop >=
+    //             (window.innerHeight || document.documentElement.clientHeight) &&
+    //             rect.top + pixFromElementTop <=
+    //             (window.innerHeight || document.documentElement.clientHeight)) ||
+    //         (rect.top + pixFromElementTop >= 0 &&
+    //             rect.bottom + pixFromElementTop <=
+    //             (window.innerHeight || document.documentElement.clientHeight))
+    //     );
+    // };
+    // // Detect request animation frame
+    // let scroll =
+    //     window.requestAnimationFrame ||
+    //     // IE Fallback
+    //     function (callback) {
+    //         window.setTimeout(callback, 1000 / 60);
+    //     };
+    // let elementsToShow = document.querySelectorAll(".show-on-scroll");
 
-    const loop = () => {
-        Array.prototype.forEach.call(elementsToShow, function (element) {
-            if (isElementInViewport(element)) {
-                element.classList.add("is-visible");
-            } else {
-                element.classList.remove("is-visible");
-            }
-        });
-        scroll(loop);
-    };
+    // const loop = () => {
+    //     Array.prototype.forEach.call(elementsToShow, function (element) {
+    //         if (isElementInViewport(element)) {
+    //             element.classList.add("is-visible");
+    //         } else {
+    //             element.classList.remove("is-visible");
+    //         }
+    //     });
+    //     scroll(loop);
+    // };
 
-    // Call the loop for the first time
-    loop();
+    // // Call the loop for the first time
+    // loop();
 
     // -----END IS ON SCREEN-----
 
@@ -84,9 +72,27 @@ document.addEventListener("DOMContentLoaded", function () {
     let phoneNumberInput = document.getElementById("phone");
     phoneNumberInput.onkeypress = isNumberKey
 
-    const validateEmail = (email) => {
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
+    // const validateEmail = (email) => {
+    //     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    //     return re.test(String(email).toLowerCase());
+    // }
+
+    const validateId = (id) => {
+        // with the help of https://github.com/atlanteh/israeli-id-validator
+        let strId = String(id).trim();
+        if (strId.length > 9 || strId < 4) {
+            return false;
+        }
+        if (strId.length < 9) {
+            while (strId.length < 9) strId = "0" + strId;
+        }
+        let counter = 0, rawVal, actualVal;
+        for (let i = 0; i < strId.length; i++) {
+            rawVal = Number(strId[i]) * ((i % 2) + 1);
+            actualVal = rawVal > 9 ? (rawVal - 9) : rawVal;
+            counter += actualVal;
+        }
+        return (counter % 10 === 0);
     }
 
     const validatePhone = (phone) => {
@@ -101,6 +107,13 @@ document.addEventListener("DOMContentLoaded", function () {
         id = document.getElementById("id"),
             phone = document.getElementById("phone"), time = document.getElementById("time"),
             city = document.getElementById("city"), message = document.getElementById("message");
+        Fname.classList.remove("error");
+        Sname.classList.remove("error");
+        id.classList.remove("error");
+        phone.classList.remove("error");
+        time.classList.remove("error");
+        city.classList.remove("error");
+        message.classList.remove("error");
         if (Fname.value.length < 2) {
             Fname.classList.add("error");
             flag = true;
@@ -109,7 +122,8 @@ document.addEventListener("DOMContentLoaded", function () {
             Sname.classList.add("error");
             flag = true;
         }
-        if (validateEmail(id.value) === false) {
+
+        if (!validateId(id.value)) {
             id.classList.add("error");
             flag = true;
         }
@@ -132,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return flag ? false : true;
     }
     const submitForm = (e) => {
+        e.preventDefault();
         if (validateForm()) {
             var data = $(this).serialize();
             if (validateForm()) {
@@ -148,7 +163,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             return true
         } else {
-            e.preventDefault();
             return false
         }
     }

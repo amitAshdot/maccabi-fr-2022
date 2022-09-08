@@ -1,13 +1,13 @@
 //colors
 // $color-primary: #67d2c4;
 $color-primary-light: #0a56b8;
-$color-primary: #08428F;
+$color-primary: #03428E;
 $color-primary-part-transparent: #08438fcd;
 
-$color-secondary: #26ABE1;
+$color-secondary: #EB008C;
 $color-secondary-part-transparent: #26ace1ce;
 
-$color-grey-light-1: #d8dde1;
+$color-grey-light-1: #DCDDDE;
 $color-grey-light-2: #ececec;
 $color-grey-carousel: #ececec;
 $color-grey-dark: #777;
@@ -20,10 +20,11 @@ $color-white: #ffffff;
 $color-black: #000;
 $color-black-main: #201b22;
 
+$color-placeholder: #7B7C80;
 //error
 // $error-border: #be1111;
 $error-border: #dc3545;
-$error-bg: rgba($error-border, 0.1);
+$error-bg: $color-white;
 // $error-bg : ;
 
 //font

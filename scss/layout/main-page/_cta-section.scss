@@ -1,59 +1,62 @@
 .logo {
-    // position: absolute;
-    // margin-block-start: auto;
-    // right: 1rem;
-    // top: 1rem;
     z-index: 1;
     position: absolute;
     margin-block-start: auto;
-    inset-inline-start: 1rem;
-    inset-block-start: 1rem;
-    background: white;
-    width: 8rem;
-    height: 8rem;
+    left: 0rem;
+    top: 0rem;
+    // background: white;
+    width: 20rem;
+    height: auto;
     object-fit: contain;
-    border-radius: 30% 50% 20% 50%;
-    padding: 1rem;
-    animation: changingBorderRadius 2s infinite linear;
+    // border-radius: 30% 50% 20% 50%;
+    // padding: 1rem;
+    // animation: changingBorderRadius 2s infinite linear;
 
     @include respond(tab-port) {
-        position: absolute;
-        margin-block-start: -5rem;
-        right: 1rem;
-        top: 1rem;
-        z-index: 1;
-        background: white;
-        border-radius: 50%;
-        height: 25rem;
-        width: 25rem;
-        padding: 4rem;
-        object-fit: contain;
+        width: 55rem;
+        position: relative;
+    }
+
+    &-container {
+
+        text-align: left;
+    }
+}
+
+picture {
+    overflow: visible;
+}
+
+.side-image {
+    position: absolute;
+    display: block;
+    width: 59vw;
+    height: auto;
+    overflow: visible;
+
+    @include respond(tab-port) {
+        position: relative;
+        width: 90vw;
+        margin-block-start: -15rem;
+        margin-inline: auto;
     }
 }
 
 .cta {
     &-section {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        justify-content: center;
-        align-items: flex-start;
-        // padding-block-start: 4rem;
-        // padding-block-end: 4rem;
-        padding-inline-start: 7rem;
-        padding-inline-end: 7rem;
-        overflow: visible;
         // border: 1px solid blue;
         max-width: 1920px;
         margin: auto;
-        // margin-top: -6rem;
+        width: 45vw;
+        margin-inline-end: 0;
+        margin-block-start: 14rem;
+        margin-block-end: 9rem;
+        overflow: visible;
 
         @include respond(tab-port) {
-            gap: 40rem;
-            padding-inline-start: 3rem;
-            padding-inline-end: 3rem;
-            padding-block-end: 0rem;
+            width: 100%;
+            margin-block-start: 5rem;
         }
     }
 
@@ -63,47 +66,62 @@
         flex-direction: column;
         align-content: center;
         align-items: center;
-        // margin-block-start: 2rem;
+        overflow: visible;
 
-        .details {
-            font-size: 3rem;
+        // margin-block-start: 2rem;
+        @include respond(tab-port) {
+            margin-block-start: -5rem;
+        }
+
+        #basad {
+            font-size: 2.5rem;
+            line-height: 2rem;
             font-weight: bold;
-            line-height: 3rem;
-            // color: $color-secondary;
+            // color: $color-primary;
             color: $color-white;
-            margin-top: 30px;
+            // margin-top: 2.5rem;
 
             @include respond(tab-port) {
-                font-size: 10rem;
-                line-height: 10rem;
+                font-size: 4.5rem;
+                line-height: 4rem;
+            }
+        }
+
+        .details {
+            font-family: 'ploniBold', sans-serif;
+            font-size: 4.5rem;
+            font-weight: bold;
+            // color: $color-secondary;
+            color: $color-primary;
+            width: 100%;
+            height: auto;
+            line-height: 4rem;
+            overflow: visible;
+
+            @include respond(tab-port) {
+                font-size: 9rem;
+                line-height: 8rem;
             }
         }
 
         #maccabi {
-            font-family: 'complet-bold', sans-serif;
-            font-size: 6rem;
+            font-family: 'ploniBold', sans-serif;
+            font-size: 8rem;
             font-weight: bold;
             // color: $color-primary;
             color: $color-white;
-            line-height: 6rem;
+            line-height: 8rem;
 
             @include respond(tab-port) {
-                font-size: 19rem;
-                line-height: 22rem;
+                font-size: 25rem;
+                line-height: 24rem;
             }
         }
     }
 
     &-form {
-        // background: rgb(38, 171, 225);
-        // background: linear-gradient(225deg, rgba(38, 171, 225, 1) 0%, rgba(8, 66, 143, 1) 85%);
-
-        // padding-inline-start: 1rem;
-        // border-inline-start: 0.5rem solid $color-primary;
-        // max-width: 1170px;
-
         @include respond(tab-port) {
-            padding-block-end: 5rem;
+            padding-block-end: 10rem;
         }
 
         &-inputs {
@@ -111,28 +129,43 @@
             justify-content: start;
             flex-wrap: wrap;
             align-items: center;
-            width: 75%;
+            width: 37vw;
             margin: auto;
-            padding-top: 7rem;
+            padding-top: 2rem;
             justify-content: space-evenly;
 
             @include respond(tab-port) {
                 width: 80%;
-                padding-top: 8rem;
+                padding-top: 0rem;
+            }
+
+            &__name {
+                display: flex;
+                margin-block-end: 1rem;
+                width: 100%;
+
+                @include respond(tab-port) {
+                    margin-block-end: 0rem;
+                }
+
+                & input:first-child {
+                    margin-inline-end: 2rem;
+                }
             }
         }
     }
 
     &-input {
         font-size: 1.5rem;
-        width: 18rem;
-        height: 3.2rem;
+        width: 100%;
+        height: 3.75rem;
         padding-inline-start: 1rem;
         padding-inline-end: 1rem;
-        margin-inline-end: 1rem;
+        // margin-inline-end: 1rem;
         border-radius: 31px;
-        border: 2px solid $color-black;
-        background: white;
+        // border: 2px solid $color-black;
+        border: none;
+        background: $color-grey-light-1;
 
         @include respond(tab-port) {
             font-size: 3.9rem;
@@ -145,12 +178,12 @@
             margin-block-start: 2rem;
         }
 
-        &:first-child {
+        // &:first-child {
 
-            @include respond(tab-port) {
-                margin-block-start: 0rem;
-            }
-        }
+        //     @include respond(tab-port) {
+        //         margin-block-start: 0rem;
+        //     }
+        // }
 
         &:nth-child(n+3) {
             margin-block-start: 1rem;
@@ -161,7 +194,7 @@
         }
 
         &::placeholder {
-            color: $color-black;
+            color: $color-placeholder;
         }
 
         &.select {
@@ -170,7 +203,10 @@
             background-repeat: no-repeat;
             background-position: left 1rem center;
             background-size: 1em;
-            background: white;
+
+            border: none;
+            background: $color-grey-light-1;
+            color: $color-placeholder;
 
             &:focus {
                 outline: none;
@@ -184,15 +220,18 @@
     }
 
     &-submit {
-        @include global-btn($color-white, $color-primary, $color-black);
-        width: 18rem;
+        @include global-btn($color-white, $color-secondary, $color-secondary);
+        // width: 18rem;
+        width: 100%;
         height: 3.2rem;
         margin-block-start: 1rem;
         // margin-inline-start: auto;
         // margin-inline-end: 1.7rem;
         border-radius: 31px;
-        background-color: $color-primary;
-
+        background-color: $color-secondary;
+        border: none;
+        font-family: 'ploniBold', sans-serif;
+        font-size: 1.5rem;
 
         @include respond(tab-port) {
             font-size: 6rem;
@@ -235,66 +274,22 @@
             line-height: initial;
             font-size: 1.5rem;
 
+            top: 3rem;
+            width: 70%;
+            right: 50%;
+            transform: translateX(50%);
 
             @include respond(tab-port) {
                 font-size: 4.5rem;
+                top: 0%;
+                width: 80%;
+                right: 50%;
+                transform: translate(50%, 0);
             }
         }
 
         &:empty {
             display: none;
-        }
-    }
-}
-
-
-.box {
-    width: 53rem;
-    height: 25rem;
-    // position: absolute;
-    top: 0px;
-    left: 0px;
-    // background-color: #f3e4db;
-    // filter: drop-shadow(9px 4px 2px #08428F);
-    background-image: linear-gradient(19deg, $color-primary-part-transparent 0%, $color-secondary-part-transparent 100%);
-    box-shadow: 10px -1px 0px 10px #08428f69;
-
-    &-top {
-        width: 30.7rem;
-        height: 22.35rem;
-        border-start-start-radius: 50% 40%;
-        border-start-end-radius: 30% 60%;
-        border-end-start-radius: 70% 60%;
-        border-end-end-radius: 30% 40%;
-
-        @include respond(tab-port) {
-            width: 90rem;
-            height: 85rem;
-            margin-top: -13rem;
-            padding-block-start: 15rem;
-            border-end-end-radius: 70% 60%;
-        }
-    }
-
-    &-bottom {
-        margin-inline-start: 25rem;
-        border-start-start-radius: 30% 40%;
-        border-start-end-radius: 70% 60%;
-        border-end-start-radius: 30% 60%;
-        border-end-end-radius: 70% 40%;
-
-        @include respond(tab-port) {
-            margin-inline-start: 0rem;
-            width: 94vw;
-            height: auto;
-            border-start-start-radius: 5% 5%;
-            border-start-end-radius: 5% 5%;
-            border-end-start-radius: 0;
-            border-end-end-radius: 0;
-
-            // background-image: linear-gradient(19deg, $color-primary 0%, $color-secondary 100%);
-            background-image: linear-gradient(19deg, #08428f 0%, #26abe1de 100%);
-            box-shadow: none;
         }
     }
 }

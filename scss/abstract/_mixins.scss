@@ -14,7 +14,7 @@
 }
 
 @mixin inputBasic {
-  font-family: 'complet', sans-serif;
+  font-family: 'ploni', sans-serif;
   height: 9rem;
   border: none;
   border-radius: 10rem;
@@ -34,7 +34,7 @@
 }
 
 @mixin submitBasic($color) {
-  font-family: 'complet-bold', sans-serif;
+  font-family: 'ploniBold', sans-serif;
   position: relative;
   height: 10rem;
   border: none;
@@ -72,7 +72,7 @@
   padding: 0.6rem 1rem;
   text-align: center;
   font-size: 1.125rem;
-  font-family: "complet", sans-serif;
+  font-family: "ploni", sans-serif;
   align-items: center;
   cursor: pointer;
   position: relative;

@@ -1,0 +1,145 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:AdobeArabic-Bold
+FamilyName:Adobe Arabic
+StyleName:Bold
+MenuName:Adobe Arabic
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Adobe Arabic Bold
+FamilyNameNative:
+StyleNameNative:Bold
+FullNameNative:
+WritingScript:Arabic
+OutlineFileName:/Volumes/GoogleDrive-116246276490688739138/My Drive/המחסן/המחסן של כאילו/Business/ConverTeam /סגור/007408-Maccabi_Minisites-Assets/007408-Converteam_Maccabi_Minisites-a Folder/Document fonts/AdobeArabic-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:307228
+FileModTime:671186701
+NameArray:0,Mac,4,Adobe Arabic Bold
+NameArray:0,Win,1,Adobe Arabic
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:AdobeArabic-Regular
+FamilyName:Adobe Arabic
+StyleName:Regular
+MenuName:Adobe Arabic
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Adobe Arabic Regular
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Arabic
+OutlineFileName:/Volumes/GoogleDrive-116246276490688739138/My Drive/המחסן/המחסן של כאילו/Business/ConverTeam /סגור/007408-Maccabi_Minisites-Assets/007408-Converteam_Maccabi_Minisites-a Folder/Document fonts/AdobeArabic-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:299680
+FileModTime:671186701
+NameArray:0,Mac,18,Adobe Arabic
+NameArray:0,Mac,4,Adobe Arabic Regular
+NameArray:0,Win,1,Adobe Arabic
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Volumes/GoogleDrive-116246276490688739138/My Drive/המחסן/המחסן של כאילו/Business/ConverTeam /סגור/007408-Maccabi_Minisites-Assets/007408-Converteam_Maccabi_Minisites-a Folder/Document fonts/AdobeFnt23.lst
+FileLength:3854
+FileModTime:684315435
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:OpenSansHebrew-Bold
+FamilyName:Open Sans Hebrew
+StyleName:Bold
+MenuName:Open Sans Hebrew
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Open Sans Hebrew Bold
+FamilyNameNative:
+StyleNameNative:Bold
+FullNameNative:
+WritingScript:Hebrew
+OutlineFileName:/Volumes/GoogleDrive-116246276490688739138/My Drive/המחסן/המחסן של כאילו/Business/ConverTeam /סגור/007408-Maccabi_Minisites-Assets/007408-Converteam_Maccabi_Minisites-a Folder/Document fonts/OpenSansHebrew-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:34236
+FileModTime:490480760
+NameArray:0,Mac,4,Open Sans Hebrew Bold
+NameArray:0,Win,1,Open Sans Hebrew
+NameArray:0,Win,16,Open Sans Hebrew
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PloniDL1.1AAA-Bold
+FamilyName:Ploni DL 1.1 AAA
+StyleName:Bold
+MenuName:Ploni DL 1.1 AAA
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Ploni DL 1.1 AAA Bold
+WritingScript:Roman
+OutlineFileName:/Volumes/GoogleDrive-116246276490688739138/My Drive/המחסן/המחסן של כאילו/Business/ConverTeam /סגור/007408-Maccabi_Minisites-Assets/007408-Converteam_Maccabi_Minisites-a Folder/Document fonts/AdobeArabic-aaa.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:144244
+FileModTime:630123474
+NameArray:0,Mac,4,Ploni DL 1.1 AAA Bold
+NameArray:0,Win,1,Ploni DL 1.1 AAA
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PloniDL1.1AAA-Regular
+FamilyName:Ploni DL 1.1 AAA
+StyleName:Regular
+MenuName:Ploni DL 1.1 AAA
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Ploni DL 1.1 AAA Regular
+WritingScript:Roman
+OutlineFileName:/Volumes/GoogleDrive-116246276490688739138/My Drive/המחסן/המחסן של כאילו/Business/ConverTeam /סגור/007408-Maccabi_Minisites-Assets/007408-Converteam_Maccabi_Minisites-a Folder/Document fonts/ploni-regular-aaa.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:142656
+FileModTime:630123474
+NameArray:0,Mac,4,Ploni DL 1.1 AAA Regular
+NameArray:0,Win,1,Ploni DL 1.1 AAA
+%EndFont
+

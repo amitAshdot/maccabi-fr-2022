@@ -1,7 +1,6 @@
 <?
 
 $recepient = "amitashdot@gmail.com,"; 
-// $recepient = "eyalivne@gmail.com,micha@targetcall.co.il,"; 
 // $recepient = "amitashdot@gmail.com"; 
 
 $Fname = trim($_POST["Fname"]);

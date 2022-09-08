@@ -10,25 +10,14 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
-    <!-- preload css, fonts     -->
-    <!--<link 
-        rel="preload"
-        as="style"
-        onload="this.rel = 'stylesheet'"
-       type="text/css"   href="./css/index.css" -->
 
-    <!-- <link rel="preload" as="font" href="https://amitashdot.github.io/targetCall-landing/fonts/ploni-regular-aaa.otf"
-        type="font/otf" crossorigin="anonymous"> -->
-
-    <!-- Accept-Encoding: gzip, deflate -->
-    <!-- PWA     -->
     <meta name="theme-color" content="#08428F" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="apple-touch-icon" href="./images/favicon.ico">
     <meta property="og:title"
         content="Rejoignez le meilleur groupe de santé en Israël et conservez vos droits et votre ancienneté">
     <meta property="og:description" content="">
-    <meta property="og:image" content="https://mylog.co.il/Maccabi/land/35930_3/images/facebook.jpg">
+    <meta property="og:image" content="./images/logo.png">
     <meta property="og:type" content="website">
 
     <title>Maccabi</title>
@@ -37,33 +26,48 @@
 
 <body>
     <!-- TOP SECTION START-->
-    <section class="top-section" id="header" aria-label="top-section">
-        <img class="logo" src="images/logo-small.webp" alt="לוגו" title="לוגו" width="110" height="42" load="lazy">
-    </section>
+    <div class="logo-container" id="logo-container" aria-label="logo-container">
+        <img class="logo" src="images/logo.webp" alt="לוגו" title="לוגו" width="110" height="42" load="lazy">
+    </div>
     <!-- TOP SECTION END-->
+
+    <!-- MOBILE TEXT START-->
+    <!-- <div class="cta-text u-mobile">
+        <p class="details">
+            أكيد,
+            بدي أعرف أكثر عن
+            مكابي
+        </p>
+    </div> -->
+    <!-- MOBILE TEXT END-->
+
+    <!-- SIDE IMAGE SECTION START-->
+    <picture>
+        <source media="(max-width: 1025px)" srcset="./images/mob.webp" defer width="370" height="321.125">
+        <img defer src="./images/web.webp" alt="סיבים בצבע כחול" class="side-image" width="1056" height="1017.380" />
+    </picture>
+    <!-- SIDE IMAGE SECTION END-->
 
     <!-- CTA SECTION START-->
     <section class="cta-section" id="cta" aria-label="cta-section">
-        <div class="box box-top">
-            <div class="cta-text">
-                <p class="details">
-                    Oui!<br>
-                    Je veux en <br>
-                    savoir plus sur la
-
-                </p>
-                <p id="maccabi">Maccabi</p>
-            </div>
+        <div class="cta-text ">
+            <!-- <p id="basad">בס"ד</p> -->
+            <p class="details">
+                Oui!
+                Je veux en
+                savoir <br>plus sur la Maccabi
+            </p>
+            <!-- <p id="maccabi">מכבי</p> -->
         </div>
-        <!-- <iframe width="700" height="400"
-            src="https://data.gov.il/dataset/citiesandsettelments/resource/5c78e9fa-c2e2-4771-93ff-7f400a12f7ba/view/142a018b-c8f8-4f79-b922-891245e23835"
-            frameBorder="0"></iframe> -->
-        <div class="box box-bottom">
-            <form class="cta-form show-on-scroll" id="form" method="post">
-                <div class=" cta-form-inputs">
 
-                    <input type="text" class="cta-input" placeholder="Prénom" name="Fname" id="Fname">
-                    <input type="text" class="cta-input" placeholder="Nom de famille" name="Sname" id="Sname">
+        <p id="message" class="cta-message error"></p>
+        <div class="box box-bottom">
+            <form class="cta-form " id="form" method="post">
+                <div class="cta-form-inputs">
+                    <div class="cta-form-inputs__name">
+                        <input type="text" class="cta-input" placeholder="Prénom" name="Fname" id="Fname">
+                        <input type="text" class="cta-input" placeholder="Nom de famille" name="Sname" id="Sname">
+                    </div>
                     <input type="tel" class="cta-input" placeholder="Carte d'identité" name="id" id="id">
                     <input type="tel" class="cta-input" placeholder="Téléphone" name="phone" id="phone">
                     <!-- <input type="text" class="cta-input" placeholder="אימייל" name="email" id="email"> -->
@@ -75,7 +79,6 @@
                 </div>
             </form>
         </div>
-
     </section>
     <!-- CTA SECTION END-->
 
@@ -91,22 +94,10 @@
         function moveTo(event) { window.scrollTo(0, document.body.scrollHeight); }
     </script> -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            $('#form').submit(function (e) {
-                e.preventDefault();
-                var data = $(this).serialize();
-                $.ajax({
-                    type: "POST",
-                    url: './mail.php',
-                    data: data,
-                    success: function (mail) {
-                        alert('הפרטים נשלחו בהצלחה');
-                        // window.location.href = 'thankyou.html';
-                    }
-                });
-
-            });
-        });
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     $('#form').submit(function (e) {
+        //     });
+        // });
     </script>
 
     <script>

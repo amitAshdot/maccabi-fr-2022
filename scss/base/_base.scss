@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   // box-sizing: inherit;
-  direction: ltr;
+  direction: rtl;
   overflow-x: hidden;
   cursor: default;
   // overflow: auto;
@@ -77,14 +77,15 @@ body {
   box-sizing: border-box;
   max-width: 1920px;
   margin-inline: auto;
-
-  background-image: url(../images/back.webp);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  display: flex;
+  // background-image: url(../images/basad-web.webp);
+  // background-size: cover;
+  // background-position: center center;
+  // background-repeat: no-repeat;
 
   @include respond(tab-port) {
     // padding: 0;
+    flex-direction: column;
   }
 }
 

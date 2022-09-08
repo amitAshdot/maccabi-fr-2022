@@ -81,7 +81,7 @@
 
       &-text {
         color: $color-white;
-        font-family: "complet-bold", sans-serif;
+        font-family: "ploniBold", sans-serif;
         font-size: 4.5vw;
         line-height: 4.3vw;
         overflow: hidden;
@@ -104,7 +104,7 @@
 
     &__bottom {
       &-text {
-        font-family: "complet-bold", sans-serif;
+        font-family: "ploniBold", sans-serif;
         font-size: 4.5vw;
         line-height: 4.3vw;
 
@@ -130,7 +130,7 @@
   &__left {
     display: flex;
     align-items: flex-end;
-    font-family: "complet-bold", sans-serif;
+    font-family: "ploniBold", sans-serif;
 
     @include respond(tab-port) {
       align-self: center;
@@ -159,7 +159,7 @@
   flex-direction: column;
   align-items: center;
   padding: 10rem 3rem;
-  font-family: "complet-bold", sans-serif;
+  font-family: "ploniBold", sans-serif;
 
   @include respond(small-desktop) {}
 
@@ -239,7 +239,7 @@
   }
 
   &-text {
-    font-family: "complet", sans-serif;
+    font-family: "ploni", sans-serif;
     font-size: 7rem;
     margin-bottom: 13rem;
 
