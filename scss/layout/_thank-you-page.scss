@@ -82,8 +82,8 @@
       &-text {
         color: $color-white;
         font-family: "ploniBold", sans-serif;
-        font-size: 4.5vw;
-        line-height: 4.3vw;
+        font-size: 4.5rem;
+        line-height: 4.3rem;
         overflow: hidden;
 
         @include respond(tab-port) {
@@ -105,8 +105,8 @@
     &__bottom {
       &-text {
         font-family: "ploniBold", sans-serif;
-        font-size: 4.5vw;
-        line-height: 4.3vw;
+        font-size: 4.5rem;
+        line-height: 4.3rem;
 
         color: $color-white;
         text-align: center;
@@ -137,8 +137,8 @@
     }
 
     &-title {
-      font-size: 4.5vw;
-      line-height: 4.3vw;
+      font-size: 4.5rem;
+      line-height: 4.3rem;
       overflow: hidden;
 
       @include respond(tab-port) {
@@ -176,7 +176,7 @@
   @include respond(phone-small) {}
 
   &-title {
-    font-size: 4.5vw;
+    font-size: 4.5rem;
     margin-bottom: 4rem;
 
     @include respond(small-desktop) {}
@@ -199,7 +199,7 @@
 
   &-button {
     @include submitBasic($color-primary);
-    font-size: 4.5vw;
+    font-size: 4.5rem;
     padding: 0rem 2rem;
     overflow: hidden;
     height: auto;
@@ -256,20 +256,20 @@
   &__images {
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    width: 30rem;
 
     @include respond(small-desktop) {
-      width: 40vw;
+      width: 40rem;
     }
 
     @include respond(tab-land) {
-      width: 45vw;
+      width: 45rem;
     }
 
     @include respond(tab-port) {}
 
     @include respond(tab-port) {
-      width: 50vw;
+      width: 50rem;
     }
 
     &-image {
