@@ -6,10 +6,14 @@
   padding: 0;
   box-sizing: border-box;
   // box-sizing: inherit;
-  direction: ltr;
+  direction: rtl;
   overflow-x: hidden;
   cursor: default;
+
   // overflow: auto;
+  @include respond(tab-port) {
+    direction: ltr;
+  }
 }
 
 *:not(html) {
