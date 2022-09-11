@@ -43,7 +43,7 @@ html {
   }
 
   @include respond(big-desktop-min) {
-    font-size: 16px;
+    font-size: 19px;
     // font-size: 121.8%; // 1rem = 19.5px, 19.5 / 16 = 75%
   }
 
