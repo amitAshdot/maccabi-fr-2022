@@ -290,14 +290,14 @@ picture {
             line-height: initial;
             font-size: 1.5rem;
 
-            top: 3rem;
+            top: -5rem;
             width: 70%;
             right: 50%;
             transform: translateX(50%);
 
             @include respond(tab-port) {
                 font-size: 4.5rem;
-                top: 0%;
+                top: -25rem;
                 width: 80%;
                 right: 50%;
                 transform: translate(50%, 0);
